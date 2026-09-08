@@ -5,7 +5,6 @@ import {
   Briefcase,
   Compass,
   GraduationCap,
-  Lightbulb,
   Linkedin,
   Mail,
   Rocket,
@@ -230,7 +229,7 @@ function Index() {
               Estas son las áreas en las que puedo ayudarte.
             </p>
           </div>
-          <div className="mt-10 grid gap-5 sm:grid-cols-2">
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (
               <article
                 key={service.title}
