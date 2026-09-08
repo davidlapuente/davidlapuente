@@ -86,12 +86,6 @@ const services = [
     description:
       "Sesiones personalizadas para desarrollar habilidades, tomar mejores decisiones y crecer en tu carrera.",
   },
-  {
-    icon: Lightbulb,
-    title: "Formación y talleres",
-    description:
-      "Charlas y talleres prácticos para equipos y profesionales que quieren seguir aprendiendo.",
-  },
 ];
 
 const experience = [
