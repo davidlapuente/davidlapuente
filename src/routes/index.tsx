@@ -2,13 +2,21 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef } from "react";
 import {
   ArrowRight,
-  Briefcase,
-  Compass,
-  GraduationCap,
+  ArrowUpRight,
+  CalendarCheck,
+  Gauge,
   Linkedin,
   Mail,
-  Rocket,
-  Users,
+  Monitor,
+  PaintBucket,
+  Quote,
+  Search,
+  ServerCog,
+  ShoppingCart,
+  Sparkles,
+  Star,
+  Target,
+  Wrench,
 } from "lucide-react";
 
 import davidPhoto from "../assets/david.jpg";
@@ -16,20 +24,20 @@ import davidPhoto from "../assets/david.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "David Lapuente Romero — Profesional y consultor" },
+      { title: "David Lapuente Romero — Diseñador web sénior UX/UI y SEO" },
       {
         name: "description",
         content:
-          "Conoce a David Lapuente Romero: perfil profesional, servicios de consultoría y acompañamiento, experiencia y vías de contacto directas.",
+          "Diseñador web sénior con más de 20 años creando webs, tiendas online y landing pages optimizadas para SEO y conversión en WordPress y Joomla.",
       },
       {
         property: "og:title",
-        content: "David Lapuente Romero — Profesional y consultor",
+        content: "David Lapuente Romero — Diseñador web sénior UX/UI y SEO",
       },
       {
         property: "og:description",
         content:
-          "Perfil profesional, servicios y contacto de David Lapuente Romero.",
+          "Webs corporativas, eCommerce, rediseño UX/UI, landing pages y SEO. Más de 20 años de experiencia.",
       },
       { property: "og:type", content: "profile" },
       { name: "twitter:card", content: "summary" },
@@ -40,6 +48,8 @@ export const Route = createFileRoute("/")({
 
 const LINKEDIN_URL = "https://www.linkedin.com/in/lapuenteromerodavid/";
 const EMAIL = "davidlapuente75@gmail.com";
+const CALENDLY_URL = "https://calendly.com/davidlapuente75";
+const GOOGLE_REVIEWS_URL = "https://share.google/e2g02fJblFjJB2JsO";
 
 function useReveal() {
   const ref = useRef<HTMLDivElement>(null);
@@ -68,41 +78,137 @@ function useReveal() {
 
 const services = [
   {
-    icon: Compass,
-    title: "Consultoría estratégica",
+    icon: Monitor,
+    title: "Diseño web profesional para empresas",
     description:
-      "Análisis de la situación actual y definición de una hoja de ruta clara para alcanzar tus objetivos profesionales o de negocio.",
+      "Webs corporativas orientadas a conversión para empresas y negocios locales. Diseño moderno, optimizado para SEO y adaptado a todos los dispositivos.",
   },
   {
-    icon: Rocket,
-    title: "Impulso de proyectos",
+    icon: ShoppingCart,
+    title: "Diseño de tienda online (eCommerce)",
     description:
-      "Acompañamiento en el lanzamiento y la consolidación de proyectos, desde la idea inicial hasta la ejecución.",
+      "Tiendas online en WooCommerce o Shopify pensadas para vender más: experiencia de usuario, velocidad, SEO, pagos, envíos y estructura de productos.",
   },
   {
-    icon: Users,
-    title: "Mentoría profesional",
+    icon: PaintBucket,
+    title: "Rediseño web y optimización UX/UI",
     description:
-      "Sesiones personalizadas para desarrollar habilidades, tomar mejores decisiones y crecer en tu carrera.",
+      "Mejora de webs existentes para aumentar conversiones: rediseño visual, optimización de la experiencia de usuario y mejora del rendimiento.",
+  },
+  {
+    icon: Target,
+    title: "Landing pages de alta conversión",
+    description:
+      "Páginas de campaña para captación de leads, con estructura estratégica, textos orientados a conversión y carga rápida. Ideales para Google Ads o redes sociales.",
+  },
+  {
+    icon: Wrench,
+    title: "Mantenimiento web mensual",
+    description:
+      "Seguridad, actualizaciones y rendimiento continuo. Incluye copias de seguridad, soporte técnico y mejoras básicas.",
+  },
+  {
+    icon: Search,
+    title: "Optimización SEO On-Page",
+    description:
+      "Mejora del posicionamiento en Google: estructura SEO, velocidad, etiquetas, contenido y configuración técnica básica.",
+  },
+  {
+    icon: ServerCog,
+    title: "Desarrollo web en CMS",
+    description:
+      "Webs personalizadas en WordPress o Joomla, autogestionables y optimizadas. Ideal para empresas que necesitan flexibilidad y escalabilidad.",
+  },
+  {
+    icon: Gauge,
+    title: "Auditoría web profesional",
+    description:
+      "Análisis completo de tu web para detectar errores de diseño, SEO y rendimiento, con un informe de acciones concretas para mejorar resultados.",
   },
 ];
 
-const experience = [
+const highlights = [
+  "Diseño centrado en el usuario y accesibilidad web (UX/UI, W3C)",
+  "Optimización SEO y contenido orientado a resultados",
+  "Automatización de procesos y personalización de CMS",
+];
+
+const tools = [
+  "WordPress",
+  "Joomla",
+  "Figma",
+  "Canva",
+  "Lovable",
+  "ChatGPT",
+  "Gemini",
+  "Grok",
+];
+
+const projects = [
   {
-    icon: Briefcase,
-    period: "Actualidad",
-    title: "Consultor independiente",
-    place: "España",
+    name: "Clínica Palacios",
+    place: "Eivissa, ES",
+    url: "https://www.clinicapalacios.es/",
     description:
-      "Acompaño a profesionales y empresas en la definición y ejecución de sus proyectos.",
+      "Web corporativa para clínica dermatológica desarrollada en Joomla, con estructura modular, SEO local y formularios de cita rápida.",
   },
   {
-    icon: GraduationCap,
-    period: "Formación continua",
-    title: "Desarrollo profesional",
-    place: "España",
+    name: "Construcciones y Derribos EL PAVO",
+    place: "Córdoba, ES",
+    url: null,
     description:
-      "Formación permanente en gestión, comunicación y nuevas tecnologías.",
+      "Aplicación web para gestionar los clientes de la empresa y los proyectos realizados.",
+  },
+  {
+    name: "Piscinas Hnos Ruiz",
+    place: "Sevilla, ES",
+    url: "https://www.piscinashermanosruiz.com/",
+    description:
+      "Web corporativa en WordPress, con diseño visual y elegante, estructura flexible y optimización local para captar clientes.",
+  },
+  {
+    name: "Loterías El Pesito",
+    place: "Córdoba, ES",
+    url: "https://www.loteriaselpesito.es/",
+    description:
+      "Tienda web en Joomla para la venta online de Lotería Nacional, con compra integrada y enfoque en la confianza del usuario.",
+  },
+  {
+    name: "@elcopiondepalma",
+    place: "Córdoba, ES",
+    url: null,
+    description:
+      "Creación de contenido digital para Instagram, Facebook y Google Business.",
+  },
+  {
+    name: "Montti Classic Wear",
+    place: "Córdoba, ES",
+    url: "https://www.monnticlassicwear.com/",
+    description:
+      "eCommerce de moda y accesorios especializada en ropa masculina, combinando el estilo formal con el casual.",
+  },
+];
+
+const reviews = [
+  {
+    name: "Margarita Cardona Cardona",
+    text: "Quiero destacar el excelente trabajo de David. Ha demostrado una gran profesionalidad, atención al detalle y una capacidad increíble para entender nuestras necesidades. El resultado ha sido una página clara, atractiva y muy funcional.",
+  },
+  {
+    name: "Juan Carlos Montes",
+    text: "Excelente profesional, siempre en contacto con el cliente. Lo recomiendo.",
+  },
+  {
+    name: "Fermín Navarro",
+    text: "Excelente servicio. Atento con sus clientes y precios razonables.",
+  },
+  {
+    name: "Raúl Méndez",
+    text: "Gran profesional en su trabajo y con mucha iniciativa, efectivo al 100%. Lo recomiendo sin lugar a dudas.",
+  },
+  {
+    name: "Juan Copión",
+    text: "Un profesional competente e implicado en su trabajo.",
   },
 ];
 
@@ -117,15 +223,18 @@ function Index() {
           <span className="font-display text-lg font-semibold tracking-tight">
             David <span className="text-primary">Lapuente</span>
           </span>
-          <div className="hidden items-center gap-6 text-sm text-muted-foreground sm:flex">
+          <div className="hidden items-center gap-6 text-sm text-muted-foreground md:flex">
             <a href="#sobre-mi" className="transition-colors hover:text-foreground">
               Sobre mí
             </a>
             <a href="#servicios" className="transition-colors hover:text-foreground">
               Servicios
             </a>
-            <a href="#experiencia" className="transition-colors hover:text-foreground">
-              Experiencia
+            <a href="#proyectos" className="transition-colors hover:text-foreground">
+              Proyectos
+            </a>
+            <a href="#resenas" className="transition-colors hover:text-foreground">
+              Reseñas
             </a>
             <a
               href="#contacto"
@@ -150,29 +259,29 @@ function Index() {
         <div className="relative mx-auto flex max-w-5xl flex-col-reverse items-center gap-10 px-6 py-24 sm:flex-row sm:py-32">
           <div className="reveal flex-1 text-center sm:text-left">
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">
-              Bienvenido a mi web
+              Diseñador web sénior · UX/UI · SEO
             </p>
             <h1 className="font-display mt-4 text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
               David Lapuente Romero
             </h1>
             <p className="mt-4 max-w-xl text-lg text-muted-foreground">
-              Profesional orientado a resultados. Ayudo a personas y empresas a
-              convertir ideas en proyectos reales, con cercanía y compromiso.
+              Transformo tus ideas en una web que conecta, inspira y genera
+              resultados. Tu viaje junto a mí comienza aquí.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3 sm:justify-start">
               <a
                 href="#contacto"
                 className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:scale-[1.03]"
               >
-                Hablemos <ArrowRight className="size-4" />
+                Quiero una web que convierta <ArrowRight className="size-4" />
               </a>
               <a
-                href={LINKEDIN_URL}
+                href={CALENDLY_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-semibold transition-colors hover:bg-secondary"
               >
-                <Linkedin className="size-4" /> LinkedIn
+                <CalendarCheck className="size-4" /> Reservar una llamada
               </a>
             </div>
           </div>
@@ -201,19 +310,51 @@ function Index() {
         <div className="mx-auto max-w-5xl px-6 py-20">
           <div className="reveal max-w-3xl">
             <h2 className="font-display text-3xl font-bold tracking-tight">
-              Sobre mí
+              Diseñador web sénior especialista en UX/UI mediante estrategias
+              intuitivas de CMS y SEO
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              Soy David Lapuente Romero, un profesional al que le apasiona
-              trabajar con personas. Creo en la comunicación honesta, el trabajo
-              bien hecho y la mejora continua como motores de cualquier proyecto
-              que merezca la pena.
+              Con más de 20 años diseñando experiencias digitales que combinan
+              estética, funcionalidad y resultados medibles, ayudo a marcas y
+              empresas a convertir ideas en sitios web de alto rendimiento. He
+              liderado proyectos de UX/UI, implementación de CMS (WordPress y
+              Joomla) y estrategias SEO que han impulsado el crecimiento
+              orgánico y mejorado la conversión de clientes en sectores como
+              eCommerce, salud y construcción.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-              Mi objetivo es aportar claridad: entender dónde estás, a dónde
-              quieres llegar y acompañarte en el camino con un plan realista y
-              medible.
+              Mis proyectos han logrado aumentar el tráfico web, mejorar la
+              retención de usuarios y optimizar el retorno de las campañas
+              digitales. Si buscas potenciar tu presencia online o elevar tu
+              estrategia digital, estaré encantado de conversar sobre cómo puedo
+              aportar valor a tu proyecto.
             </p>
+          </div>
+          <ul className="mt-10 grid gap-4 sm:grid-cols-3">
+            {highlights.map((item) => (
+              <li
+                key={item}
+                className="reveal rounded-2xl border border-border bg-card p-5 text-sm leading-relaxed text-muted-foreground"
+              >
+                <Sparkles className="mb-3 size-5 text-primary" />
+                {item}
+              </li>
+            ))}
+          </ul>
+          <div className="reveal mt-10">
+            <p className="text-sm font-medium uppercase tracking-widest text-primary">
+              Herramientas y tecnologías
+            </p>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {tools.map((tool) => (
+                <span
+                  key={tool}
+                  className="rounded-full border border-border bg-card px-4 py-1.5 text-sm text-muted-foreground"
+                >
+                  {tool}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -223,10 +364,10 @@ function Index() {
         <div className="mx-auto max-w-5xl px-6 py-20">
           <div className="reveal">
             <h2 className="font-display text-3xl font-bold tracking-tight">
-              Servicios
+              El poder del diseño web
             </h2>
             <p className="mt-3 max-w-2xl text-muted-foreground">
-              Estas son las áreas en las que puedo ayudarte.
+              Estos son los servicios con los que puedo ayudarte a crecer.
             </p>
           </div>
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -250,47 +391,96 @@ function Index() {
         </div>
       </section>
 
-      {/* Experiencia */}
-      <section id="experiencia" className="border-t border-border/60">
+      {/* Proyectos */}
+      <section id="proyectos" className="border-t border-border/60">
         <div className="mx-auto max-w-5xl px-6 py-20">
           <div className="reveal">
             <h2 className="font-display text-3xl font-bold tracking-tight">
-              Experiencia y formación
+              Últimos proyectos
             </h2>
+            <p className="mt-3 max-w-2xl text-muted-foreground">
+              Una selección de trabajos recientes para empresas y negocios.
+            </p>
           </div>
-          <div className="mt-10 space-y-8">
-            {experience.map((item) => (
-              <article key={item.title} className="reveal flex gap-5">
-                <div className="flex flex-col items-center">
-                  <div className="flex size-11 shrink-0 items-center justify-center rounded-full border border-border bg-card text-primary">
-                    <item.icon className="size-5" />
+          <div className="mt-10 grid gap-5 sm:grid-cols-2">
+            {projects.map((project) => (
+              <article
+                key={project.name}
+                className="reveal rounded-2xl border border-border bg-card p-6 transition-all hover:-translate-y-1 hover:border-primary/50"
+              >
+                <div className="flex items-start justify-between gap-3">
+                  <div>
+                    <h3 className="font-display text-lg font-semibold">
+                      {project.name}
+                    </h3>
+                    <p className="text-xs uppercase tracking-widest text-primary">
+                      {project.place}
+                    </p>
                   </div>
-                  <div className="mt-2 w-px flex-1 bg-border" />
+                  {project.url ? (
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Visitar la web de ${project.name}`}
+                      className="text-muted-foreground transition-colors hover:text-primary"
+                    >
+                      <ArrowUpRight className="size-5" />
+                    </a>
+                  ) : null}
                 </div>
-                <div className="pb-2">
-                  <p className="text-xs font-medium uppercase tracking-widest text-primary">
-                    {item.period}
-                  </p>
-                  <h3 className="font-display mt-1 text-lg font-semibold">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">{item.place}</p>
-                  <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-                    {item.description}
-                  </p>
-                </div>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  {project.description}
+                </p>
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Reseñas */}
+      <section id="resenas" className="border-t border-border/60">
+        <div className="mx-auto max-w-5xl px-6 py-20">
+          <div className="reveal">
+            <h2 className="font-display text-3xl font-bold tracking-tight">
+              Reseñas
+            </h2>
+            <p className="mt-3 max-w-2xl text-muted-foreground">
+              Lo que dicen las personas y empresas con las que he trabajado.
+            </p>
+          </div>
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {reviews.map((review) => (
+              <blockquote
+                key={review.name}
+                className="reveal rounded-2xl border border-border bg-card p-6"
+              >
+                <Quote className="size-5 text-primary" />
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                  {review.text}
+                </p>
+                <footer className="mt-4 flex items-center gap-2">
+                  <div className="flex gap-0.5 text-primary">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <Star key={i} className="size-3.5 fill-current" />
+                    ))}
+                  </div>
+                  <cite className="font-display text-sm font-semibold not-italic">
+                    {review.name}
+                  </cite>
+                </footer>
+              </blockquote>
+            ))}
+          </div>
           <p className="reveal mt-8 text-sm text-muted-foreground">
-            Puedes ver mi trayectoria completa en{" "}
+            Puedes leer todas las reseñas en{" "}
             <a
-              href={LINKEDIN_URL}
+              href={GOOGLE_REVIEWS_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium text-primary underline-offset-4 hover:underline"
             >
-              mi perfil de LinkedIn
+              mi perfil de Google
             </a>
             .
           </p>
@@ -302,16 +492,24 @@ function Index() {
         <div className="mx-auto max-w-5xl px-6 py-24 text-center">
           <div className="reveal">
             <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
-              ¿Trabajamos juntos?
+              Empieza hoy: crea, conecta y crece
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-lg text-muted-foreground">
-              Cuéntame tu idea o proyecto y vemos cómo puedo ayudarte. Respondo
-              personalmente a cada mensaje.
+              Cuéntame tu idea o reserva un hueco en mi agenda y vemos juntos
+              cómo llevar tu web al siguiente nivel.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <a
-                href={`mailto:${EMAIL}`}
+                href={CALENDLY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:scale-[1.03]"
+              >
+                <CalendarCheck className="size-4" /> Ir a mi página de reservas
+              </a>
+              <a
+                href={`mailto:${EMAIL}`}
+                className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-semibold transition-colors hover:bg-secondary"
               >
                 <Mail className="size-4" /> {EMAIL}
               </a>
@@ -321,7 +519,7 @@ function Index() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-semibold transition-colors hover:bg-secondary"
               >
-                <Linkedin className="size-4" /> Escríbeme por LinkedIn
+                <Linkedin className="size-4" /> LinkedIn
               </a>
             </div>
           </div>
