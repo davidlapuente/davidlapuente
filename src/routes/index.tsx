@@ -242,7 +242,24 @@ function Index() {
               "radial-gradient(600px 300px at 70% 20%, oklch(0.828 0.111 230.3 / 0.12), transparent 70%)",
           }}
         />
-        <div className="relative mx-auto flex max-w-5xl flex-col-reverse items-center gap-10 px-6 py-24 sm:flex-row sm:py-32">
+        <div className="relative mx-auto flex max-w-5xl flex-col items-center gap-10 px-6 py-24 sm:flex-row sm:py-32">
+          <div className="reveal shrink-0">
+            <div
+              className="rounded-full p-1.5"
+              style={{
+                background:
+                  "linear-gradient(135deg, oklch(0.828 0.111 230.3), oklch(0.627 0.265 303.9))",
+              }}
+            >
+              <img
+                src={davidPhoto}
+                alt="Foto de perfil de David Lapuente Romero"
+                width={200}
+                height={200}
+                className="size-40 rounded-full object-cover sm:size-52"
+              />
+            </div>
+          </div>
           <div className="reveal flex-1 text-center sm:text-left">
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">
               Diseñador web sénior · UX/UI · SEO
@@ -269,23 +286,6 @@ function Index() {
               >
                 <CalendarCheck className="size-4" /> Reservar una llamada
               </a>
-            </div>
-          </div>
-          <div className="reveal shrink-0">
-            <div
-              className="rounded-full p-1.5"
-              style={{
-                background:
-                  "linear-gradient(135deg, oklch(0.828 0.111 230.3), oklch(0.627 0.265 303.9))",
-              }}
-            >
-              <img
-                src={davidPhoto}
-                alt="Foto de perfil de David Lapuente Romero"
-                width={200}
-                height={200}
-                className="size-40 rounded-full object-cover sm:size-52"
-              />
             </div>
           </div>
         </div>
