@@ -79,51 +79,51 @@ function useReveal() {
 const services = [
   {
     icon: Monitor,
-    title: "Diseño web profesional para empresas",
+    title: "Diseño Web Profesional para Empresas",
     description:
-      "Webs corporativas orientadas a conversión para empresas y negocios locales. Diseño moderno, optimizado para SEO y adaptado a todos los dispositivos.",
+      "Páginas corporativas orientadas a conversión, con diseño moderno, optimizado para SEO y adaptado a todos los dispositivos.",
   },
   {
     icon: ShoppingCart,
-    title: "Diseño de tienda online (eCommerce)",
+    title: "Diseño de Tienda Online (eCommerce)",
     description:
-      "Tiendas online en WooCommerce o Shopify pensadas para vender más: experiencia de usuario, velocidad, SEO, pagos, envíos y estructura de productos.",
+      "Tiendas optimizadas para vender más en WooCommerce o Shopify, con enfoque en experiencia de usuario, velocidad y SEO.",
   },
   {
     icon: PaintBucket,
-    title: "Rediseño web y optimización UX/UI",
+    title: "Rediseño Web y Optimización UX/UI",
     description:
-      "Mejora de webs existentes para aumentar conversiones: rediseño visual, optimización de la experiencia de usuario y mejora del rendimiento.",
+      "Mejora de páginas existentes para aumentar conversiones y rendimiento.",
   },
   {
     icon: Target,
-    title: "Landing pages de alta conversión",
+    title: "Landing Pages de Alta Conversión",
     description:
-      "Páginas de campaña para captación de leads, con estructura estratégica, textos orientados a conversión y carga rápida. Ideales para Google Ads o redes sociales.",
+      "Diseño estratégico para campañas de marketing y captación de leads.",
   },
   {
     icon: Wrench,
-    title: "Mantenimiento web mensual",
+    title: "Mantenimiento Web Mensual",
     description:
-      "Seguridad, actualizaciones y rendimiento continuo. Incluye copias de seguridad, soporte técnico y mejoras básicas.",
+      "Seguridad, actualizaciones, copias de seguridad y soporte técnico continuo.",
   },
   {
     icon: Search,
     title: "Optimización SEO On-Page",
     description:
-      "Mejora del posicionamiento en Google: estructura SEO, velocidad, etiquetas, contenido y configuración técnica básica.",
+      "Estructura SEO, velocidad, etiquetas y configuración técnica básica.",
   },
   {
     icon: ServerCog,
-    title: "Desarrollo web en CMS",
+    title: "Desarrollo Web en CMS",
     description:
-      "Webs personalizadas en WordPress o Joomla, autogestionables y optimizadas. Ideal para empresas que necesitan flexibilidad y escalabilidad.",
+      "Webs personalizadas en WordPress o Joomla, autogestionables y escalables.",
   },
   {
     icon: Gauge,
-    title: "Auditoría web profesional",
+    title: "Auditoría Web Profesional",
     description:
-      "Análisis completo de tu web para detectar errores de diseño, SEO y rendimiento, con un informe de acciones concretas para mejorar resultados.",
+      "Análisis completo con informe de acciones concretas para mejorar resultados.",
   },
 ];
 
@@ -135,13 +135,13 @@ const highlights = [
 
 const tools = [
   "WordPress",
-  "Joomla",
-  "Figma",
   "Canva",
+  "Figma",
+  "Joomla",
   "Lovable",
+  "Claude",
   "ChatGPT",
   "Gemini",
-  "Grok",
 ];
 
 const projects = [
@@ -150,49 +150,39 @@ const projects = [
     place: "Eivissa, ES",
     url: "https://www.clinicapalacios.es/",
     description:
-      "Web corporativa para clínica dermatológica desarrollada en Joomla, con estructura modular, SEO local y formularios de cita rápida.",
-  },
-  {
-    name: "Construcciones y Derribos EL PAVO",
-    place: "Córdoba, ES",
-    url: null,
-    description:
-      "Aplicación web para gestionar los clientes de la empresa y los proyectos realizados.",
+      "Web corporativa en Joomla para clínica dermatológica, diseño claro orientado al paciente, SEO local y cita rápida.",
   },
   {
     name: "Piscinas Hnos Ruiz",
     place: "Sevilla, ES",
     url: "https://www.piscinashermanosruiz.com/",
     description:
-      "Web corporativa en WordPress, con diseño visual y elegante, estructura flexible y optimización local para captar clientes.",
+      "Web corporativa en WordPress, diseño visual y elegante, optimización local.",
   },
   {
     name: "Loterías El Pesito",
     place: "Córdoba, ES",
     url: "https://www.loteriaselpesito.es/",
     description:
-      "Tienda web en Joomla para la venta online de Lotería Nacional, con compra integrada y enfoque en la confianza del usuario.",
-  },
-  {
-    name: "@elcopiondepalma",
-    place: "Córdoba, ES",
-    url: null,
-    description:
-      "Creación de contenido digital para Instagram, Facebook y Google Business.",
+      "Tienda online en Joomla para venta de Lotería Nacional, con sistema de compra integrado.",
   },
   {
     name: "Montti Classic Wear",
     place: "Córdoba, ES",
     url: "https://www.monnticlassicwear.com/",
     description:
-      "eCommerce de moda y accesorios especializada en ropa masculina, combinando el estilo formal con el casual.",
+      "eCommerce de moda y accesorios masculinos.",
   },
 ];
 
 const reviews = [
   {
     name: "Margarita Cardona Cardona",
-    text: "Quiero destacar el excelente trabajo de David. Ha demostrado una gran profesionalidad, atención al detalle y una capacidad increíble para entender nuestras necesidades. El resultado ha sido una página clara, atractiva y muy funcional.",
+    text: "Quiero destacar el excelente trabajo de David. Ha demostrado una gran profesionalidad, atención al detalle y una capacidad increíble para entender nuestras necesidades. El resultado ha sido una página clara, atractiva y muy funcional. Además, el trato ha sido cercano y siempre dispuesto a ayudar en todo momento.",
+  },
+  {
+    name: "Juan Copión",
+    text: "Un profesional competente e implicado en su trabajo.",
   },
   {
     name: "Juan Carlos Montes",
@@ -205,10 +195,6 @@ const reviews = [
   {
     name: "Raúl Méndez",
     text: "Gran profesional en su trabajo y con mucha iniciativa, efectivo al 100%. Lo recomiendo sin lugar a dudas.",
-  },
-  {
-    name: "Juan Copión",
-    text: "Un profesional competente e implicado en su trabajo.",
   },
 ];
 
@@ -310,24 +296,21 @@ function Index() {
         <div className="mx-auto max-w-5xl px-6 py-20">
           <div className="reveal max-w-3xl">
             <h2 className="font-display text-3xl font-bold tracking-tight">
-              Diseñador web sénior especialista en UX/UI mediante estrategias
+              Diseñador Web Sénior especialista en UX/UI mediante estrategias
               intuitivas de CMS y SEO
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              Con más de 20 años diseñando experiencias digitales que combinan
-              estética, funcionalidad y resultados medibles, ayudo a marcas y
-              empresas a convertir ideas en sitios web de alto rendimiento. He
-              liderado proyectos de UX/UI, implementación de CMS (WordPress y
-              Joomla) y estrategias SEO que han impulsado el crecimiento
-              orgánico y mejorado la conversión de clientes en sectores como
-              eCommerce, salud y construcción.
+              Más de 20 años diseñando experiencias digitales que combinan
+              estética, funcionalidad y resultados medibles. He liderado
+              proyectos de UX/UI, implementación de CMS (WordPress y Joomla) y
+              estrategias SEO que han impulsado el crecimiento orgánico y
+              mejorado la conversión de clientes en sectores como E-commerce,
+              Salud y Construcción.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-              Mis proyectos han logrado aumentar el tráfico web, mejorar la
-              retención de usuarios y optimizar el retorno de las campañas
-              digitales. Si buscas potenciar tu presencia online o elevar tu
-              estrategia digital, estaré encantado de conversar sobre cómo puedo
-              aportar valor a tu proyecto.
+              Destaco en: diseño centrado en el usuario y accesibilidad web
+              (UX/UI, W3C), optimización SEO y contenido orientado a resultados,
+              automatización de procesos y personalización de CMS.
             </p>
           </div>
           <ul className="mt-10 grid gap-4 sm:grid-cols-3">
