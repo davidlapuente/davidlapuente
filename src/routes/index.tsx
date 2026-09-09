@@ -296,24 +296,21 @@ function Index() {
         <div className="mx-auto max-w-5xl px-6 py-20">
           <div className="reveal max-w-3xl">
             <h2 className="font-display text-3xl font-bold tracking-tight">
-              Diseñador web sénior especialista en UX/UI mediante estrategias
+              Diseñador Web Sénior especialista en UX/UI mediante estrategias
               intuitivas de CMS y SEO
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              Con más de 20 años diseñando experiencias digitales que combinan
-              estética, funcionalidad y resultados medibles, ayudo a marcas y
-              empresas a convertir ideas en sitios web de alto rendimiento. He
-              liderado proyectos de UX/UI, implementación de CMS (WordPress y
-              Joomla) y estrategias SEO que han impulsado el crecimiento
-              orgánico y mejorado la conversión de clientes en sectores como
-              eCommerce, salud y construcción.
+              Más de 20 años diseñando experiencias digitales que combinan
+              estética, funcionalidad y resultados medibles. He liderado
+              proyectos de UX/UI, implementación de CMS (WordPress y Joomla) y
+              estrategias SEO que han impulsado el crecimiento orgánico y
+              mejorado la conversión de clientes en sectores como E-commerce,
+              Salud y Construcción.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
-              Mis proyectos han logrado aumentar el tráfico web, mejorar la
-              retención de usuarios y optimizar el retorno de las campañas
-              digitales. Si buscas potenciar tu presencia online o elevar tu
-              estrategia digital, estaré encantado de conversar sobre cómo puedo
-              aportar valor a tu proyecto.
+              Destaco en: diseño centrado en el usuario y accesibilidad web
+              (UX/UI, W3C), optimización SEO y contenido orientado a resultados,
+              automatización de procesos y personalización de CMS.
             </p>
           </div>
           <ul className="mt-10 grid gap-4 sm:grid-cols-3">
