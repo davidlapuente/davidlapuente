@@ -82,20 +82,29 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       meta: [
         { charSet: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
-        { title: "David Lapuente Romero" },
+        { title: "David Lapuente | Diseño Web Profesional en España" },
         {
           name: "description",
           content:
-            "Web personal de David Lapuente Romero: perfil profesional, servicios y contacto.",
+            "Diseñador Web Sénior con más de 20 años de experiencia. Webs en WordPress y Joomla orientadas a conversión, con SEO y UX/UI cuidados, para negocios y proyectos de todo tipo en España.",
         },
-        { property: "og:title", content: "David Lapuente Romero" },
+        { property: "og:title", content: "David Lapuente | Diseño Web Profesional en España" },
         {
           property: "og:description",
           content:
-            "Web personal de David Lapuente Romero: perfil profesional, servicios y contacto.",
+            "Diseñador Web Sénior con más de 20 años de experiencia. Webs en WordPress y Joomla orientadas a conversión, con SEO y UX/UI cuidados, para negocios y proyectos de todo tipo en España.",
         },
+        { property: "og:image", content: davidPhoto },
         { property: "og:type", content: "website" },
-        { name: "twitter:card", content: "summary" },
+        { property: "og:locale", content: "es_ES" },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: "David Lapuente | Diseño Web Profesional en España" },
+        {
+          name: "twitter:description",
+          content:
+            "Diseñador Web Sénior con más de 20 años de experiencia. Webs en WordPress y Joomla orientadas a conversión, con SEO y UX/UI cuidados, para negocios y proyectos de todo tipo en España.",
+        },
+        { name: "twitter:image", content: davidPhoto },
       ],
       links: [
         {
