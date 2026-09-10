@@ -20,6 +20,10 @@ import {
 } from "lucide-react";
 
 import davidPhoto from "../assets/david.jpg";
+import clinicaPalaciosImage from "../assets/clinica-palacios.webp.asset.json";
+import loteriasElPesitoImage from "../assets/loterias-el-pesito.webp.asset.json";
+import monttiClassicWearImage from "../assets/montti-classic-wear.webp.asset.json";
+import piscinasHnosRuizImage from "../assets/piscinas-hnos-ruiz.webp.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -149,6 +153,7 @@ const projects = [
     name: "Clínica Palacios",
     place: "Eivissa, ES",
     url: "https://www.clinicapalacios.es/",
+    image: clinicaPalaciosImage.url,
     description:
       "Web corporativa en Joomla para clínica dermatológica, diseño claro orientado al paciente, SEO local y cita rápida.",
   },
@@ -156,6 +161,7 @@ const projects = [
     name: "Piscinas Hnos Ruiz",
     place: "Sevilla, ES",
     url: "https://www.piscinashermanosruiz.com/",
+    image: piscinasHnosRuizImage.url,
     description:
       "Web corporativa en WordPress, diseño visual y elegante, optimización local.",
   },
@@ -163,13 +169,15 @@ const projects = [
     name: "Loterías El Pesito",
     place: "Córdoba, ES",
     url: "https://www.loteriaselpesito.es/",
+    image: loteriasElPesitoImage.url,
     description:
       "Tienda online en Joomla para venta de Lotería Nacional, con sistema de compra integrado.",
   },
   {
     name: "Montti Classic Wear",
     place: "Córdoba, ES",
-    url: "https://www.monnticlassicwear.com/",
+    url: "https://www.montticlassicwear.com/",
+    image: monttiClassicWearImage.url,
     description:
       "eCommerce de moda y accesorios masculinos.",
   },
@@ -243,9 +251,9 @@ function Index() {
           }}
         />
         <div className="relative mx-auto flex max-w-5xl flex-col items-center gap-10 px-6 py-24 sm:flex-row sm:py-32">
-          <div className="reveal shrink-0">
+          <div className="reveal shrink-0 sm:order-2">
             <div
-              className="rounded-full p-1.5"
+              className="rounded-2xl p-1.5"
               style={{
                 background:
                   "linear-gradient(135deg, oklch(0.828 0.111 230.3), oklch(0.627 0.265 303.9))",
@@ -256,11 +264,11 @@ function Index() {
                 alt="Foto de perfil de David Lapuente Romero"
                 width={200}
                 height={200}
-                className="size-40 rounded-full object-cover sm:size-52"
+                className="size-40 rounded-2xl object-cover sm:size-52"
               />
             </div>
           </div>
-          <div className="reveal flex-1 text-center sm:text-left">
+          <div className="reveal flex-1 text-center sm:order-1 sm:text-left">
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-primary">
               Diseñador web sénior · UX/UI · SEO
             </p>
@@ -353,7 +361,7 @@ function Index() {
               Estos son los servicios con los que puedo ayudarte a crecer.
             </p>
           </div>
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {services.map((service) => (
               <article
                 key={service.title}
@@ -389,18 +397,34 @@ function Index() {
             {projects.map((project) => (
               <article
                 key={project.name}
-                className="reveal rounded-2xl border border-border bg-card p-6 transition-all hover:-translate-y-1 hover:border-primary/50"
+                className="reveal overflow-hidden rounded-2xl border border-border bg-card transition-all hover:-translate-y-1 hover:border-primary/50"
               >
-                <div className="flex items-start justify-between gap-3">
-                  <div>
-                    <h3 className="font-display text-lg font-semibold">
-                      {project.name}
-                    </h3>
-                    <p className="text-xs uppercase tracking-widest text-primary">
-                      {project.place}
-                    </p>
-                  </div>
-                  {project.url ? (
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Visitar la web de ${project.name}`}
+                  className="block overflow-hidden border-b border-border"
+                >
+                  <img
+                    src={project.image}
+                    alt={`Portada de la web de ${project.name}`}
+                    width={720}
+                    height={450}
+                    loading="lazy"
+                    className="aspect-[8/5] w-full object-cover object-top transition-transform duration-300 hover:scale-[1.02]"
+                  />
+                </a>
+                <div className="p-6">
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <h3 className="font-display text-lg font-semibold">
+                        {project.name}
+                      </h3>
+                      <p className="text-xs uppercase tracking-widest text-primary">
+                        {project.place}
+                      </p>
+                    </div>
                     <a
                       href={project.url}
                       target="_blank"
@@ -410,11 +434,11 @@ function Index() {
                     >
                       <ArrowUpRight className="size-5" />
                     </a>
-                  ) : null}
+                  </div>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                    {project.description}
+                  </p>
                 </div>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  {project.description}
-                </p>
               </article>
             ))}
           </div>
