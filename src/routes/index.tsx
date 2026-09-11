@@ -548,20 +548,65 @@ function Index() {
 
       {/* Pie de página */}
       <footer className="border-t border-border/60">
-        <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-3 px-6 py-8 text-sm text-muted-foreground sm:flex-row">
+        <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 px-6 py-8 text-sm text-muted-foreground sm:flex-row">
           <p>
             © {new Date().getFullYear()} David Lapuente Romero. Todos los
             derechos reservados.
           </p>
-          <a
-            href={LINKEDIN_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Perfil de LinkedIn de David Lapuente Romero"
-            className="transition-colors hover:text-primary"
-          >
-            <Linkedin className="size-5" />
-          </a>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <a
+              href={LINKEDIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Perfil de LinkedIn de David Lapuente Romero"
+              className="transition-colors hover:text-primary"
+            >
+              <Linkedin className="size-5" />
+            </a>
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Perfil de Instagram de David Lapuente Romero"
+              className="transition-colors hover:text-primary"
+            >
+              <Instagram className="size-5" />
+            </a>
+            <a
+              href={X_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Perfil de X (Twitter) de David Lapuente Romero"
+              className="transition-colors hover:text-primary"
+            >
+              <Twitter className="size-5" />
+            </a>
+            <a
+              href={BLUESKY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Perfil de Bluesky de David Lapuente Romero"
+              className="transition-colors hover:text-primary"
+            >
+              <BlueskyIcon className="size-5" />
+            </a>
+            <a
+              href={`mailto:${EMAIL}`}
+              aria-label="Enviar correo a David Lapuente Romero"
+              className="transition-colors hover:text-primary"
+            >
+              <Mail className="size-5" />
+            </a>
+            <a
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Reservar una llamada con David Lapuente Romero"
+              className="transition-colors hover:text-primary"
+            >
+              <CalendarCheck className="size-5" />
+            </a>
+          </div>
         </div>
       </footer>
     </div>
