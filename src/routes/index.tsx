@@ -17,7 +17,7 @@ import {
   Sparkles,
   Star,
   Target,
-  Twitter,
+  
   Wrench,
 } from "lucide-react";
 
@@ -27,28 +27,9 @@ import loteriasElPesitoImage from "../assets/loterias-el-pesito.webp.asset.json"
 import monttiClassicWearImage from "../assets/montti-classic-wear.webp.asset.json";
 import piscinasHnosRuizImage from "../assets/piscinas-hnos-ruiz.webp.asset.json";
 
+// El título, descripción y etiquetas sociales se definen solo en src/routes/__root.tsx
+// para evitar duplicidades; el head del root es el que se aplica en esta página.
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "David Lapuente Romero — Diseñador web sénior UX/UI y SEO" },
-      {
-        name: "description",
-        content:
-          "Diseñador web sénior con más de 20 años creando webs, tiendas online y landing pages optimizadas para SEO y conversión en WordPress y Joomla.",
-      },
-      {
-        property: "og:title",
-        content: "David Lapuente Romero — Diseñador web sénior UX/UI y SEO",
-      },
-      {
-        property: "og:description",
-        content:
-          "Webs corporativas, eCommerce, rediseño UX/UI, landing pages y SEO. Más de 20 años de experiencia.",
-      },
-      { property: "og:type", content: "profile" },
-      { name: "twitter:card", content: "summary" },
-    ],
-  }),
   component: Index,
 });
 
@@ -59,10 +40,18 @@ const INSTAGRAM_URL = "https://instagram.com/dlapue";
 const X_URL = "https://x.com/dlapue";
 const BLUESKY_URL = "https://bsky.app/profile/dlapue.bsky.social";
 
+function XIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+    </svg>
+  );
+}
+
 function BlueskyIcon({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
-      <path d="M12 2.5C10.5 4.5 7.5 9 6 11.5c-1 1.8-1.5 3.3-1.5 4.7 0 2.3 1.8 4.1 4.1 4.1 1.4 0 2.6-.6 3.4-1.6.8 1 2 1.6 3.4 1.6 2.3 0 4.1-1.8 4.1-4.1 0-1.4-.5-2.9-1.5-4.7C16.5 9 13.5 4.5 12 2.5z" />
+      <path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566.944 1.561 1.266.902 1.565.139 1.908 0 3.08 0 3.768c0 .69.378 5.65.624 6.479.815 2.736 3.713 3.66 6.383 3.364.136-.02.275-.039.415-.056-.138.022-.276.04-.415.056-3.912.58-7.387 2.005-2.83 7.078 5.013 5.19 6.87-1.113 7.823-4.308.953 3.195 2.05 9.271 7.733 4.308 4.267-4.308 1.172-6.498-2.74-7.078a8.741 8.741 0 0 1-.415-.056c.14.017.279.036.415.056 2.67.297 5.568-.628 6.383-3.364.246-.828.624-5.79.624-6.478 0-.69-.139-1.861-.902-2.206-.659-.298-1.664-.62-4.3 1.24C16.046 4.748 13.087 8.687 12 10.8Z" />
     </svg>
   );
 }
@@ -579,7 +568,7 @@ function Index() {
               aria-label="Perfil de X (Twitter) de David Lapuente Romero"
               className="transition-colors hover:text-primary"
             >
-              <Twitter className="size-5" />
+              <XIcon className="size-5" />
             </a>
             <a
               href={BLUESKY_URL}
