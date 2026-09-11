@@ -17,7 +17,7 @@ import {
   Sparkles,
   Star,
   Target,
-  Twitter,
+  
   Wrench,
 } from "lucide-react";
 
@@ -568,7 +568,7 @@ function Index() {
               aria-label="Perfil de X (Twitter) de David Lapuente Romero"
               className="transition-colors hover:text-primary"
             >
-              <Twitter className="size-5" />
+              <XIcon className="size-5" />
             </a>
             <a
               href={BLUESKY_URL}
