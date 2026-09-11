@@ -5,6 +5,7 @@ import {
   ArrowUpRight,
   CalendarCheck,
   Gauge,
+  Instagram,
   Linkedin,
   Mail,
   Monitor,
@@ -16,6 +17,7 @@ import {
   Sparkles,
   Star,
   Target,
+  Twitter,
   Wrench,
 } from "lucide-react";
 
@@ -53,6 +55,17 @@ export const Route = createFileRoute("/")({
 const LINKEDIN_URL = "https://www.linkedin.com/in/lapuenteromerodavid/";
 const EMAIL = "davidlapuente75@gmail.com";
 const CALENDLY_URL = "https://calendly.com/davidlapuente75";
+const INSTAGRAM_URL = "https://instagram.com/dlapue";
+const X_URL = "https://x.com/dlapue";
+const BLUESKY_URL = "https://bsky.app/profile/dlapue.bsky.social";
+
+function BlueskyIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" className={className}>
+      <path d="M12 2.5C10.5 4.5 7.5 9 6 11.5c-1 1.8-1.5 3.3-1.5 4.7 0 2.3 1.8 4.1 4.1 4.1 1.4 0 2.6-.6 3.4-1.6.8 1 2 1.6 3.4 1.6 2.3 0 4.1-1.8 4.1-4.1 0-1.4-.5-2.9-1.5-4.7C16.5 9 13.5 4.5 12 2.5z" />
+    </svg>
+  );
+}
 const GOOGLE_REVIEWS_URL = "https://share.google/e2g02fJblFjJB2JsO";
 
 function useReveal() {
@@ -535,20 +548,65 @@ function Index() {
 
       {/* Pie de página */}
       <footer className="border-t border-border/60">
-        <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-3 px-6 py-8 text-sm text-muted-foreground sm:flex-row">
+        <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 px-6 py-8 text-sm text-muted-foreground sm:flex-row">
           <p>
             © {new Date().getFullYear()} David Lapuente Romero. Todos los
             derechos reservados.
           </p>
-          <a
-            href={LINKEDIN_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Perfil de LinkedIn de David Lapuente Romero"
-            className="transition-colors hover:text-primary"
-          >
-            <Linkedin className="size-5" />
-          </a>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <a
+              href={LINKEDIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Perfil de LinkedIn de David Lapuente Romero"
+              className="transition-colors hover:text-primary"
+            >
+              <Linkedin className="size-5" />
+            </a>
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Perfil de Instagram de David Lapuente Romero"
+              className="transition-colors hover:text-primary"
+            >
+              <Instagram className="size-5" />
+            </a>
+            <a
+              href={X_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Perfil de X (Twitter) de David Lapuente Romero"
+              className="transition-colors hover:text-primary"
+            >
+              <Twitter className="size-5" />
+            </a>
+            <a
+              href={BLUESKY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Perfil de Bluesky de David Lapuente Romero"
+              className="transition-colors hover:text-primary"
+            >
+              <BlueskyIcon className="size-5" />
+            </a>
+            <a
+              href={`mailto:${EMAIL}`}
+              aria-label="Enviar correo a David Lapuente Romero"
+              className="transition-colors hover:text-primary"
+            >
+              <Mail className="size-5" />
+            </a>
+            <a
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Reservar una llamada con David Lapuente Romero"
+              className="transition-colors hover:text-primary"
+            >
+              <CalendarCheck className="size-5" />
+            </a>
+          </div>
         </div>
       </footer>
     </div>
