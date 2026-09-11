@@ -5,6 +5,7 @@ import {
   ArrowUpRight,
   CalendarCheck,
   Gauge,
+  Instagram,
   Linkedin,
   Mail,
   Monitor,
@@ -16,6 +17,7 @@ import {
   Sparkles,
   Star,
   Target,
+  Twitter,
   Wrench,
 } from "lucide-react";
 
