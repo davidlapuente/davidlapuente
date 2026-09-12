@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -8,6 +8,7 @@ import {
   Instagram,
   Linkedin,
   Mail,
+  Menu,
   Monitor,
   PaintBucket,
   Quote,
@@ -17,7 +18,7 @@ import {
   Sparkles,
   Star,
   Target,
-  
+  X,
   Wrench,
 } from "lucide-react";
 
