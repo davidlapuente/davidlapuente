@@ -244,7 +244,41 @@ function Index() {
               Contacto
             </a>
           </div>
+          <button
+            type="button"
+            aria-label={isMobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
+            aria-expanded={isMobileMenuOpen}
+            onClick={toggleMobileMenu}
+            className="inline-flex items-center justify-center rounded-md p-2 text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground md:hidden"
+          >
+            {isMobileMenuOpen ? <X className="size-6" /> : <Menu className="size-6" />}
+          </button>
         </nav>
+        {isMobileMenuOpen && (
+          <div className="border-t border-border/60 bg-background/95 px-6 py-4 backdrop-blur-md md:hidden">
+            <div className="mx-auto flex max-w-5xl flex-col gap-4 text-base text-muted-foreground">
+              <a href="#sobre-mi" onClick={closeMobileMenu} className="transition-colors hover:text-foreground">
+                Sobre mí
+              </a>
+              <a href="#servicios" onClick={closeMobileMenu} className="transition-colors hover:text-foreground">
+                Servicios
+              </a>
+              <a href="#proyectos" onClick={closeMobileMenu} className="transition-colors hover:text-foreground">
+                Proyectos
+              </a>
+              <a href="#resenas" onClick={closeMobileMenu} className="transition-colors hover:text-foreground">
+                Reseñas
+              </a>
+              <a
+                href="#contacto"
+                onClick={closeMobileMenu}
+                className="inline-flex w-fit items-center rounded-full bg-primary px-4 py-2 font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+              >
+                Contacto
+              </a>
+            </div>
+          </div>
+        )}
       </header>
 
       {/* Cabecera destacada */}
