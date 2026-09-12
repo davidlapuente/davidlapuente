@@ -211,6 +211,10 @@ const reviews = [
 
 function Index() {
   const rootRef = useReveal();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => setIsMobileMenuOpen((open) => !open);
+  const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   return (
     <div ref={rootRef} className="min-h-screen bg-background text-foreground">
