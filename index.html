@@ -128,17 +128,23 @@
   .socials{
     display:flex;
     justify-content:center;
-    gap:18px;
+    align-items:center;
+    gap:6px;
+    flex-wrap:wrap;
   }
   .socials a{
     color:var(--muted);
     font-size:13px;
     text-decoration:none;
     border-bottom:1px solid transparent;
+    padding:12px 10px;
+    border-radius:8px;
+    transition:color .15s ease, background-color .15s ease;
   }
   .socials a:hover{
     color:var(--teal);
     border-bottom-color:var(--teal);
+    background-color:rgba(45,212,191,0.08);
   }
 </style>
 </head>
